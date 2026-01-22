@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok Coins | USDT TRC20</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+    margin: 0;
+}
+.container {
+    max-width: 420px;
+    margin: 40px auto;
+    background: #020617;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+h1 {
+    text-align: center;
+    color: #38bdf8;
+}
+.lang {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.lang button {
+    background: #1e293b;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin: 3px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.offer {
+    background: #020617;
+    border: 1px solid #1e293b;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-top: 12px;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: none;
+    background: #1e293b;
+    color: white;
+}
+.wallet {
+    background: #020617;
+    border: 1px dashed #38bdf8;
+    padding: 10px;
+    margin-top: 10px;
+    word-break: break-all;
+}
+button.pay {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #38bdf8;
+    color: #020617;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.note {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-top: 15px;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="lang">
+        <button onclick="setLang('en')">English</button>
+        <button onclick="setLang('ar')">العربية</button>
+    </div>
+
+    <h1 id="title">TikTok Coins Purchase</h1>
+
+    <div class="offer" id="offer">
+        💰 20 USD = <strong>5000 TikTok Coins</strong><br>
+        ⚡ Instant Delivery
+    </div>
+
+    <label id="contactLabel">Email or Phone</label>
+    <input type="text" placeholder="example@email.com أو رقم الهاتف">
+
+    <label id="tiktokLabel">TikTok Username</label>
+    <input type="text" placeholder="@username">
+
+    <div class="wallet">
+        <strong id="walletTitle">Payment Wallet (USDT TRC20)</strong><br>
+        TSVSDKmRwYWWPrVBD4SZtG8L7au7sPPDVb
+    </div>
+
+    <button class="pay" id="payBtn">I Have Paid</button>
+
+    <div class="note" id="note">
+        After payment, your TikTok Coins will be processed instantly.
+        Please make sure the information is correct.
+    </div>
+
+</div>
+
+<script>
+function setLang(lang) {
+    if (lang === 'ar') {
+        document.body.dir = "rtl";
+        title.innerText = "شراء عملات تيك توك";
+        offer.innerHTML = "💰 20 دولار = <strong>5000 عملة تيك توك</strong><br>⚡ تسليم فوري";
+        contactLabel.innerText = "البريد الإلكتروني أو رقم الهاتف";
+        tiktokLabel.innerText = "اسم المستخدم في تيك توك";
+        walletTitle.innerText = "محفظة الدفع (USDT TRC20)";
+        payBtn.innerText = "لقد قمت بالدفع";
+        note.innerText = "بعد الدفع، سيتم معالجة طلبك فورًا. يرجى التأكد من صحة المعلومات.";
+    } else {
+        document.body.dir = "ltr";
+        title.innerText = "TikTok Coins Purchase";
+        offer.innerHTML = "💰 20 USD = <strong>5000 TikTok Coins</strong><br>⚡ Instant Delivery";
+        contactLabel.innerText = "Email or Phone";
+        tiktokLabel.innerText = "TikTok Username";
+        walletTitle.innerText = "Payment Wallet (USDT TRC20)";
+        payBtn.innerText = "I Have Paid";
+        note.innerText = "After payment, your TikTok Coins will be processed instantly. Please make sure the information is correct.";
+    }
+}
+</script>
+
+</body>
+</html>
